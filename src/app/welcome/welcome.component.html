@@ -1,0 +1,42 @@
+<div class="flex-row-body main-body">
+  <div class="left-panel">
+      <img src="../../assets/side_banner.jpg" class="side">
+  </div>
+  <div class="right-panel">
+    <div class="flex-col form">
+      <div class="flex-row btn-holder">
+        <div [ngClass]="{'active': loginClicked}" (click)="onLogin()" class="login btn">Login</div>
+        <div [ngClass]="{'active': !loginClicked}" (click)="onSignUp()" class="sign-up btn">Sign Up</div>
+      </div>
+      <div class="form-body flex-col">
+        <mat-form-field *ngIf="!loginClicked" class="input">
+            <input autocomplete="off" [(ngModel)]="username" matInput placeholder="Username" autocomplete="false" spellcheck="false">
+            <mat-icon matSuffix><img class="form-image" src="../../assets/user.png"></mat-icon>
+        </mat-form-field>
+        <mat-form-field class="input">
+            <input autocomplete="off" [(ngModel)]="email" matInput placeholder="Email" autocomplete="false" spellcheck="false" type="email">
+            <mat-icon matSuffix><img class="form-image" src="../../assets/email.png"></mat-icon>
+        </mat-form-field>
+        <mat-form-field *ngIf="!loginClicked" class="input">
+            <input autocomplete="off" [(ngModel)]="repeatEmail" matInput placeholder="Confirm email" autocomplete="false" spellcheck="false" type="email">
+            <mat-icon matSuffix><img class="form-image" src="../../assets/email.png"></mat-icon>
+        </mat-form-field>
+        <mat-form-field class="input">
+            <input autocomplete="off" [(ngModel)]="password" matInput placeholder="Password" autocomplete="false" spellcheck="false" type="password">
+            <mat-icon matSuffix><img class="form-image" src="../../assets/password.png"></mat-icon>
+        </mat-form-field>
+        <mat-form-field *ngIf="!loginClicked" class="input">
+            <input autocomplete="off" [(ngModel)]="repeatPassword" matInput placeholder="Repeat password" autocomplete="false" spellcheck="false" type="password">
+            <mat-icon matSuffix><img class="form-image" src="../../assets/password.png"></mat-icon>
+        </mat-form-field>
+        <div (click)="onActionButton()" class="btn-action">{{ btnAction }}</div>
+        <span *ngIf="loginClicked" class="forgot-pass"><b>Forgot password ?</b></span>
+      </div>
+
+      <div *ngIf="canDisplayAlert" class="alert-holder">
+        <ngb-alert [dismissible]="true" (close)="onCloseWarningAlert()" >
+          <strong>{{ alertMessage }}</strong></ngb-alert>
+      </div>
+    </div>
+  </div>
+</div>

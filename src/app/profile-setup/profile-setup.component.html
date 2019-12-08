@@ -1,0 +1,56 @@
+<div class="flex-col body">
+  <span class="header">{{ stepTitle }}</span>
+  <div *ngIf="isFourthStep" class="sub-title">( You can add this later on )</div>
+
+  <div *ngIf="!isFourthStep" class="card flex-col">
+    <div *ngIf="isFirstStepOpen" class="first-step">
+      <mat-form-field class="input-field">
+        <input [(ngModel)]="firstName" class="input" matInput placeholder="First Name">
+      </mat-form-field>
+      <mat-form-field class="input-field">
+        <input [(ngModel)]="lastName" class="input" matInput placeholder="Last Name">
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="isSecondStepOpen" class="second-step">
+      <mat-form-field class="input-field">
+        <input [(ngModel)]="country" class="input" matInput placeholder="Country">
+      </mat-form-field>
+      <mat-form-field class="input-field">
+        <input [(ngModel)]="city" class="input" matInput placeholder="City">
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="isThirdStepOpen" class="third-step flex-col">
+      <div class="selector-holder flex-row">
+        <div (click)="onEmail()" [ngClass]="{'selector-selected': emailSelected ? true : false}"
+          class="email selector flex-col">
+          <img src="../../assets/email.png" class="img-email">
+          <span class="selector-text">Email</span>
+        </div>
+        <div (click)="onPhone()" [ngClass]="{'selector-selected': phoneSelected ? true : false}"
+          class="phone selector flex-col">
+          <img src="../../assets/phone.png" class="img-phone">
+          <span class="selector-text">Phone</span>
+        </div>
+      </div>
+      <mat-form-field *ngIf="phoneSelected" class="input-field">
+        <input [(ngModel)]="phoneNumber" class="input" matInput placeholder="Phone Number" type="tel">
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  <div *ngIf="isFourthStep" class="fourth-step flex-col">
+    <div (click)="onPhotoPicker()" class="photo-picker flex-col">
+      <img src="../../assets/user.png">
+      <input [(ngModel)]="profilePhotoPath" id="fileInp" type="file" class="file-inp">
+    </div>
+    <span>Add a photo</span>
+  </div>
+
+  <div class="btn-holder">
+    <div (click)="onBack()" class="btn-back btn">Back</div>
+    <div (click)="onNext()" class="btn-next btn">{{ btnText }}</div>
+  </div>
+</div>

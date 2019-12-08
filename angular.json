@@ -93,9 +93,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "../node_modules/font-awesome/css/font-awesome.min.css",
+              "../node_modules/primeng/resources/primeng.min.css",
+              "../node_modules/primeng/resources/themes/darkness/theme.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "lint": {
