@@ -1,0 +1,30 @@
+<div class="body flex-row">
+  <div class="side-bar">
+    <div class="side-btn-holder flex-col">
+      <img (click)="onNavProjects()" src="../../assets/projects.png" alt="" class="side-img">
+      <img src="../../assets/projects.png" alt="" class="side-img">
+      <img src="../../assets/projects.png" alt="" class="side-img">
+      <img src="../../assets/stats.png" alt="" class="side-img">
+    </div>
+  </div>
+  <div class="flex-col right-holder">
+    <div class="top-bar flex-row container-fluid">
+      <span class="bar-title">{{ currentPageTitle }}</span>
+      <div class="bar-mid flex-row">
+        <span class="bar-mid-text">All</span>
+        <span class="bar-mid-text">Current</span>
+        <span class="bar-mid-text">Finished</span>
+        <span class="bar-mid-text">On Hold</span>
+        <span class="bar-mid-text">Archive</span>
+      </div>
+      <div class="bar-end flex-row">
+        <img class="bar-img" src="../../assets/moon.png" alt="">
+      </div>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+

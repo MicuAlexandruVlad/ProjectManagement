@@ -52,12 +52,18 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProfileSetupComponent } from './profile-setup/profile-setup.component';
 import {FileUploadModule} from 'primeng/fileupload';
 import {ButtonModule} from 'primeng/button';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProjectPageComponent } from './project-page/project-page.component';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    ProfileSetupComponent
+    ProfileSetupComponent,
+    DashboardComponent,
+    ProjectPageComponent,
+    AddProjectComponent
   ],
   imports: [
     FileUploadModule,
@@ -112,6 +118,6 @@ import {ButtonModule} from 'primeng/button';
     ScrollingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, WelcomeComponent]
+  bootstrap: [AppComponent, WelcomeComponent, DashboardComponent, ProjectPageComponent]
 })
 export class AppModule { }

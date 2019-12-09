@@ -1,0 +1,49 @@
+
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-bar {
+    
+
+    .search-bar {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+        margin-top: 2rem;
+        background-color: rgb(250, 250, 250);
+        border-radius: 1rem;
+
+        img {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-right: 1rem;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            outline-width: 0;
+        }
+    }
+}
+
+.fab {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    outline-width: 0;
+}
