@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Add Summary</h2>
+<mat-dialog-content>
+    <mat-form-field class="summary">
+        <textarea [(ngModel)]="data.summary" matInput placeholder="Summary" spellcheck="false"></textarea>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button (click)="onCancel()" class="dialog-btn" mat-button [mat-dialog-close]="data">Cancel</button>
+  <button (click)="onDone()" class="dialog-btn" mat-button [mat-dialog-close]="data" cdkFocusInitial>Done</button>
+</mat-dialog-actions>

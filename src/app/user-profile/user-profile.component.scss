@@ -1,0 +1,120 @@
+
+$pageBg: #F8F8F8;
+$colorBlue: #006CFF;
+$action: rgb(35, 113, 223);
+$separatorColor: rgb(140, 140, 140);
+$contentTextColor: rgb(170, 170, 170);
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.body {
+    background-color: $pageBg;
+}
+
+.top-side {
+    margin-top: 2rem;
+
+    .user-profile-photo {
+        display: flex;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 4rem;
+        background-color: $colorBlue;
+        margin-left: auto;
+        margin-right: auto;
+
+        .initial {
+            font-size: 2em;
+            color: white;
+            margin: auto;
+        }
+    }
+
+    .user-full-name {
+        font-size: 1.6em;
+        margin-top: 1.2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .user-position {
+        color: rgb(117, 117, 117);
+        margin-top: .3rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .location {
+        margin-top: .3rem;
+        color: rgb(117, 117, 117);
+        margin-left: auto;
+        margin-right: auto;
+
+        .location-img {
+            width: 1rem;
+            height: 1rem;
+            margin-right: .6rem;
+        }
+    }
+}
+
+.content {
+
+    margin-top: 5rem;
+
+    .content-card {
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: white;
+        box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.08);
+        margin-left: auto;
+        margin-right: auto;
+        width: 44rem;
+
+        .content-title {
+            font-size: 1.2em;
+        }
+
+        .separator {
+            width: 100%;
+            height: 1px;
+            background-color: $separatorColor;
+            margin-top: .6rem;
+        }
+        
+        .content-text {
+            margin-top: .8rem;
+            color: $contentTextColor;
+            font-size: 1.1em;
+        }
+
+        .action {
+            color: $action;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1.6rem;
+            cursor: pointer;
+        }
+    }
+
+    .card-m-top {
+        margin-top: 3rem;
+    }
+
+    @media screen and (max-width: 780px) {
+        .content-card {
+            width: 94%;
+        }
+    }
+}
+

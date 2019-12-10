@@ -1,0 +1,19 @@
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.label {
+  font-size: 1.2em;
+  margin-bottom: 0.6rem;
+}
+.form-input {
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+.dialog-btn {
+  outline-width: 0;
+}

@@ -23,4 +23,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['./projects'], { relativeTo: this.activatedRoute })
   }
 
+  onUserProfile(): void {
+    this.router.navigate(['./user-profile'])
+  }
+
 }

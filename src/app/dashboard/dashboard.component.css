@@ -51,6 +51,13 @@
 .top-bar .bar-end .bar-img:hover {
   filter: saturate(1);
 }
+.top-bar .bar-end .user-profile {
+  margin-left: 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 700;
+  cursor: pointer;
+}
 .side-bar {
   height: 100vh;
   padding-left: 1.2rem;

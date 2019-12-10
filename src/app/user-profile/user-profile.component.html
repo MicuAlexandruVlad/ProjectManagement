@@ -1,0 +1,32 @@
+<div class="body container-fluid flex-col">
+    <div class="flex-col top-side">
+        <div class="user-profile-photo">
+            <span class="initial">T</span>
+        </div>
+        <span class="user-full-name">Trevor Baggins</span>
+        <span class="user-position">Web Developer</span>
+        <div class="flex-row location">
+            <img class="location-img" src="../../assets/location.png" alt="">
+            <span>Barcelona, Spain</span>
+        </div>
+    </div>
+    <div class="content flex-col">
+        <div class="content-card summary flex-col">
+            <span class="content-title">
+                Summary
+            </span>
+            <div class="separator"></div>
+            <span class="user-summary content-text">{{ summary }}</span>
+            <span (click)="openSummaryDialog()" class="action">Add summary</span>
+        </div>
+
+        <div class="content-card work-experience flex-col card-m-top">
+            <span class="content-title">
+                Work experience
+            </span>
+            <div class="separator"></div>
+            <span class="user-work-experience content-text">No work experience added.</span>
+            <span (click)="openWorkExperienceDialog()" class="action">Add work experience</span>
+        </div>
+    </div>
+</div>

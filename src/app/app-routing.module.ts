@@ -5,6 +5,7 @@ import { ProfileSetupComponent } from './profile-setup/profile-setup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { AddProjectComponent } from './add-project/add-project.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
     { path: 'projects', component: ProjectPageComponent }
   ]},
   { path: 'add-project', component: AddProjectComponent },
-  { path: '**', redirectTo: 'dashboard' }
+  { path: 'user-profile', component: UserProfileComponent },
+  { path: '**', redirectTo: 'user-profile' }
 ];
 
 @NgModule({

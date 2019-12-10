@@ -48,13 +48,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileSetupComponent } from './profile-setup/profile-setup.component';
-import {FileUploadModule} from 'primeng/fileupload';
-import {ButtonModule} from 'primeng/button';
+import { FileUploadModule } from 'primeng/fileupload';
+import { ButtonModule } from 'primeng/button';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { AddProjectComponent } from './add-project/add-project.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { SummaryDialogComponent } from './summary-dialog/summary-dialog.component';
+import { WorkExperienceDialogComponent } from './work-experience-dialog/work-experience-dialog.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +66,14 @@ import { AddProjectComponent } from './add-project/add-project.component';
     ProfileSetupComponent,
     DashboardComponent,
     ProjectPageComponent,
-    AddProjectComponent
+    AddProjectComponent,
+    UserProfileComponent,
+    SummaryDialogComponent,
+    WorkExperienceDialogComponent
+  ],
+  entryComponents: [
+    SummaryDialogComponent,
+    WorkExperienceDialogComponent,
   ],
   imports: [
     FileUploadModule,
@@ -118,6 +128,6 @@ import { AddProjectComponent } from './add-project/add-project.component';
     ScrollingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, WelcomeComponent, DashboardComponent, ProjectPageComponent]
+  bootstrap: [AppComponent, WelcomeComponent, DashboardComponent, ProjectPageComponent, WorkExperienceDialogComponent]
 })
 export class AppModule { }

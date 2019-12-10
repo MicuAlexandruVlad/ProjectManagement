@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Add Work Experience</h2>
+<mat-dialog-content>
+  <div class="flex-col">
+    <span class="label">What company did you work for ?</span>
+    <mat-form-field class="form-input">
+      <input matInput placeholder="Company" spellcheck="false">
+    </mat-form-field>
+    <span class="label">What was the title of your position ?</span>
+    <mat-form-field class="form-input">
+      <input matInput placeholder="Job Title" spellcheck="false">
+    </mat-form-field>
+    <span class="label">When did you work there ?</span>
+    <div class="flex-row">
+      <mat-form-field>
+        <input matInput [matDatepicker]="start" placeholder="Start Date">
+        <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
+        <mat-datepicker #start></mat-datepicker>
+      </mat-form-field>
+      <span class="ml-4 mr-4 mt-auto mb-auto"><strong>-</strong></span>
+      <mat-form-field>
+        <input [(ngModel)]="data.jobEnd" matInput [matDatepicker]="end" placeholder="End Date">
+        <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
+        <mat-datepicker #end></mat-datepicker>
+      </mat-form-field>
+      <mat-checkbox (click)="onPresent()" class="ml-4 mt-auto mb-auto">Present</mat-checkbox>
+    </div>
+    <span class="label">What were your responsibilities ?</span>
+      <mat-form-field class="responsibilities">
+          <textarea [(ngModel)]="data.jobTasks" matInput placeholder="Responsibilities" spellcheck="false"></textarea>
+      </mat-form-field>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button (click)="onCancel()" class="dialog-btn" mat-button [mat-dialog-close]="data">Cancel</button>
+  <button (click)="onDone()" class="dialog-btn" mat-button [mat-dialog-close]="data" cdkFocusInitial>Done</button>
+</mat-dialog-actions>
