@@ -14,6 +14,12 @@
   width: 100%;
   margin-bottom: 0.8rem;
 }
+.form-input-sm {
+  margin-bottom: 0.8rem;
+}
 .dialog-btn {
   outline-width: 0;
+}
+.fade-out {
+  opacity: 0.4;
 }

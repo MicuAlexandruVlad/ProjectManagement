@@ -74,6 +74,11 @@
 }
 .content .content-card .content-text {
   margin-top: 0.8rem;
+  color: #6e6e6e;
+  font-size: 1.1em;
+}
+.content .content-card .content-text-faded {
+  margin-top: 0.8rem;
   color: #aaa;
   font-size: 1.1em;
 }
@@ -83,6 +88,15 @@
   margin-right: auto;
   margin-top: 1.6rem;
   cursor: pointer;
+}
+.content .content-card .work-experience .job-title {
+  font-size: 1.2em;
+  color: #006cff;
+  font-weight: 500;
+}
+.content .content-card .work-experience .company {
+  font-size: 1.1em;
+  color: black;
 }
 .content .card-m-top {
   margin-top: 3rem;

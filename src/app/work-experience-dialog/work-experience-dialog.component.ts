@@ -7,6 +7,10 @@ export interface DialogData {
     jobStart: string
     jobEnd: string
     jobTasks: string
+    jobCity: string
+    jobCountry: string
+    edit: boolean
+    cancel: boolean
 }
 
 @Component({
@@ -17,14 +21,33 @@ export interface DialogData {
 export class WorkExperienceDialogComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<WorkExperienceDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+        @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+        
+  startDate = new Date(this.data.jobStart)
+  endDate = new Date(this.data.jobEnd)
+
+  isPresentChecked = false
 
   ngOnInit() {
+    console.log(this.data);
   }
 
+
   onPresent(): void {
-    this.data.jobEnd = 'Present'
-    
+    this.isPresentChecked = !this.isPresentChecked
+  }
+  
+  onCancel(): void {
+    this.data.cancel = true
+  }
+
+  onDone(): void {
+    if (this.isPresentChecked) {
+      this.data.jobEnd = 'Present'
+    } else {
+      this.data.jobEnd = this.endDate.toString()
+    }
+    this.data.jobStart = this.startDate.toString()
   }
 
 }

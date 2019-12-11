@@ -4,4 +4,6 @@ export class WorkExperience {
     jobStart: string
     jobEnd: string
     jobTasks: string
+    jobCity: string
+    jobCountry: string
 }

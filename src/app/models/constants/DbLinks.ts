@@ -3,4 +3,6 @@ export class DbLinks {
     registerUser = this.baseLink + 'users/register-user/'
     authUser = this.baseLink + 'users/auth-user/'
     updateUser = this.baseLink + 'users/update-user/'
+    uploadWorkExperience = this.baseLink + 'users/update-user-experience/'
+    uploadSummary = this.baseLink + 'users/update-user-summary/'
 }
